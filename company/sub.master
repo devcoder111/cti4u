@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpage.master" %>
+
+<%@ Register TagName="company" TagPrefix="uc" Src="~/nav-company.ascx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" Runat="Server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphMain" Runat="Server">
+    <div class="mobnav">
+        <uc:company />
+    </div>
+    <asp:ContentPlaceHolder ID="cphMain" runat="server" />
+</asp:Content>
+

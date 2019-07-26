@@ -1,0 +1,79 @@
+<%@ Master Language="C#" %>
+
+<%@ Register TagName="header" TagPrefix="uc" Src="~/header.ascx" %>
+<%@ Register TagName="navigation" TagPrefix="uc" Src="~/navigation.ascx" %>
+<%@ Register TagName="footer" TagPrefix="uc" Src="~/footer.ascx" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Communications Technologies, Inc.</title>
+    <meta name="designer" content="design by A8B" />
+    <meta name="twitter:description" content="Delivering Strategic Technologies with Integrity and Innovation" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" type="image/x-icon" href="images-design/favicon.ico" />
+    <link rel="stylesheet"  media="screen" href="/styleSheet.css" />
+    <script src="https://code.a8b.co/js/head.min.js"></script>
+    <script>
+        head.load({ "jq": "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" },
+            { "wf": "https://code.a8b.co/forms/js/a8b.webform.js" }
+        ); //head.load
+
+        head.ready(function () {
+            if (head.desktop) { }
+            else {
+                $('body').css('min-width', '0');
+                $('#navigation ul ul').addClass('hide');
+                $('.mobnav').css('display', 'block');
+            };
+          
+            $('.back a').click(function () {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            });
+        }); //head.ready
+
+        head.ready(function () {
+            if (document.documentElement.clientWidth < 71) {
+                $(window).on('load', function () {
+                    $("html, body").animate({ scrollTop: $("section").offset().top }, 1200);
+                }); // slow scroll down to section start
+            }
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-25908394-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <uc:header runat="server" />
+        <uc:navigation runat='server' />
+        <asp:ContentPlaceHolder ID="cphBanner" runat="server" />
+        <div class="wrap">
+            <asp:ContentPlaceHolder ID="cphSidebar" runat="server" />
+            <section>
+                <asp:ContentPlaceHolder ID="cphMain" runat="server" />
+            </section>
+            <br class="clear" />
+        </div>
+    </div>
+    <uc:footer runat="server" />
+</body>
+
+</html>

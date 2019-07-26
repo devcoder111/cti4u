@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="../sub.master" %>
+
+
+<%@ Register TagName="products" TagPrefix="uc" Src="~/nav-products.ascx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" Runat="Server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" Runat="Server">
+    <div class="banner medical"></div>
+    <asp:ContentPlaceHolder ID="cphBanner" runat="server" />
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphMain" Runat="Server">
+    <asp:ContentPlaceHolder ID="cphMain" runat="server" />
+    <br class="clear" />
+    <p class="backnav"><a href="/products/medical/">&laquo; Back to Medical IT</a></p>
+</asp:Content>
+

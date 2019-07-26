@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpage.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="Server">
+    <style>
+        aside { padding: 0 10px }
+        section { display: table-cell; vertical-align: top; }
+        hr { margin: 40px 0; }
+        section { width: 75%; font-family: 'Muli', sans-serif; font-size: 16px; color: #444; }
+        section img { margin-left: 4%; max-width: 96% }
+        section h2, section h3, section p { margin-left: 4%; }
+        section h2, section h3 { font-family: 'Roboto Slab', serif; font-weight: 400; }
+        section h2 { font-size: 28px; color: #7BB31A; }
+        section h3 { font-size: 24px; color: #FF9C00; }
+        section p { line-height: 1.5; }
+        section .btn { padding: 8px 20px; margin-top: 30px; }
+        form { text-align: left; }
+        form div { width: 100%; }
+        form input[type=text], form input[type=email], form input[type=tel], form input[type=submit], form textarea, form input[type=number] { font-family: 'Muli', sans-serif; font-size: 14px; }
+        form input[type=submit], section .btn { font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 400; background-color: #FF9C00; border-radius: 0; }
+        form input[type=submit]:hover, section .btn:hover { background-color: #7BB31A; }
+    </style>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+    <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Muli:400,700%7cRoboto+Slab">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBanner" runat="Server">
+    <div class="banner medical"></div>
+    <asp:ContentPlaceHolder ID="cphBanner" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphSidebar" runat="Server">
+    <aside>
+        <h3>Medical Keywords<br />
+            &amp; Definitions</h3>
+        <ul>
+            <li><a href="/medical-keywords/medical-data-backup.aspx">Medical Data Backup</a></li>
+            <li><a href="/medical-keywords/emr-ehr.aspx">EMR / EHR Implementation<br />
+                &amp; Migration</a></li>
+            <li><a href="/medical-keywords/hipaa-compliance.aspx">HIPAA Compliance</a></li>
+            <li><a href="/medical-keywords/risk-analysis.aspx">Risk Analysis</a></li>
+            <li><a href="/medical-keywords/practice-management-software.aspx">Practice Management Software</a></li>
+            <li><a href="/medical-keywords/hospital-it.aspx">Hospital IT</a></li>
+            <li><a href="/medical-keywords/phone-system-compliance.aspx">Phone System Compliance</a></li>
+            <li><a href="/medical-keywords/meaningful-use.aspx">Meaningful Use</a></li>
+            <li><a href="/medical-keywords/door-access-control.aspx">Door Access Control</a></li>
+            <li><a href="/medical-keywords/security-cameras.aspx">Security Cameras</a></li>
+        </ul>
+        <asp:ContentPlaceHolder ID="cphSidebar" runat="server" />
+    </aside>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphMain" runat="Server">
+    <asp:ContentPlaceHolder ID="cphMain" runat="server" />
+</asp:Content>
+
